@@ -305,6 +305,13 @@ footer::after {
     margin-bottom: 1rem;
 }
 
+.service-box img.rounded-image {
+    max-width: 120px; /* Slightly bigger size for the image */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 1rem;
+}
+
 .service-box h3 {
     font-size: 1.5rem; /* Title text size */
     color: #0056b3; /* Blue color for title */
@@ -313,9 +320,10 @@ footer::after {
 }
 
 .service-box p {
-    font-size: 1rem; /* Body text size */
+    font-size: 0.9rem; /* Reduced font size for service descriptions */
     color: #333; /* Dark grey color for body text */
     font-family: 'Lato', sans-serif; /* Updated font to Lato */
+    font-style: italic; /* Make text italic */
 }
 
 #about {
@@ -339,6 +347,7 @@ footer::after {
     border-radius: 50%;
     object-fit: cover;
     order: 2; /* Move the person image to the right */
+    margin-top: 3rem; /* Add more margin to lower the image vertically */
 }
 
 #about-content .column {
@@ -440,4 +449,100 @@ footer::after {
 #contact button:hover {
     background: #004494; /* Darker blue background on hover */
     color: #fff;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #333; /* Dark grey text color */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+.caption p {
+    margin: 0;
+}
+
+.caption p:nth-child(2) {
+    font-size: 0.9rem; /* Smaller font size for the second line */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.read-more {
+    font-size: 1.5rem;
+    color: #0056b3; /* Blue color for the arrow */
+    transition: transform 0.3s;
+    margin-left: 0.5rem; /* Add some space between the title and the arrow */
+}
+
+.project:hover .read-more {
+    transform: translateX(5px); /* Move the arrow slightly to the right on hover */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .project, .service-box, .entry, .gallery img {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project img, .service-box img, .entry img, .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-content, .service-box h3, .entry div {
+        width: 100%;
+    }
+
+    #about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .person {
+        width: 100%;
+        height: auto;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
 }
