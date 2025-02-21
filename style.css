@@ -1,0 +1,443 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+body {
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text color */
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+header {
+    background: #ffffff; /* White background */
+    color: #333; /* Dark grey text color */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+    position: relative;
+}
+
+header::before, header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #0056b3; /* Blue accent line */
+}
+
+header::before {
+    top: 0;
+}
+
+header::after {
+    bottom: 0;
+}
+
+header .logo {
+    font-size: 2rem; /* Larger logo font size */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: #333; /* Dark grey text color */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+nav a:hover {
+    background: #e0e0e0; /* Light grey background on hover */
+    color: #333;
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #0056b3; /* Blue color for h1 */
+    font-size: 2.5rem; /* Larger font size for h1 */
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #333; /* Dark grey color for h2 */
+    font-size: 2rem; /* Font size for h2 */
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+h1, h2 {
+    text-align: center; /* Center all section headings */
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project img {
+    width: auto; /* Ensure images maintain their aspect ratio */
+    height: 200px; /* Set a fixed height for consistency */
+    max-width: 50%; /* Ensure images do not exceed half the container width */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project h3 {
+    font-size: 1.5rem; /* Title text size */
+    color: #0056b3; /* Blue color for title */
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+.project p {
+    font-size: 1rem; /* Body text size */
+    color: #333; /* Dark grey color for body text */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: #0056b3; /* Blue background */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem; /* Font size for buttons */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+button:hover {
+    background: #004494; /* Darker blue background on hover */
+    color: #fff;
+}
+
+form {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form .form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+form .form-row label, form .form-row input {
+    flex: 1;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333; /* Dark grey text color */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px;
+    background: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text color */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+form textarea {
+    height: 150px; /* Slightly bigger than other input boxes */
+    resize: none; /* Make it non-resizable */
+}
+
+form button {
+    width: 100%;
+}
+
+footer {
+    background: #ffffff; /* White background */
+    color: #333; /* Dark grey text color */
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+footer::before, footer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #0056b3; /* Blue accent line */
+}
+
+footer::before {
+    top: 0;
+}
+
+footer::after {
+    bottom: 0;
+}
+
+#home {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('image-cover.jpg'); /* Add gradient overlay */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 8rem 2rem; /* Increase padding to make the section longer */
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Add a light overlay to blend the image */
+    z-index: 1;
+}
+
+#home h1, #home p {
+    position: relative;
+    z-index: 2;
+    color: #333;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add text shadow for better readability */
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+#home:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('image-cover.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+#home:hover h1, #home:hover p {
+    color: #333;
+    transition: color 0.3s;
+}
+
+#projects {
+    background-color: #ffffff; /* White background */
+    padding: 2rem 0;
+}
+
+#services {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 2rem 0;
+    color: #333; /* Dark grey text color */
+}
+
+.services-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service-box {
+    background: #fff; /* White background for service boxes */
+    color: #333; /* Dark grey text color */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px; /* Fixed width for consistency */
+}
+
+.service-box img {
+    max-width: 100px; /* Fixed size for images */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.service-box h3 {
+    font-size: 1.5rem; /* Title text size */
+    color: #0056b3; /* Blue color for title */
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+.service-box p {
+    font-size: 1rem; /* Body text size */
+    color: #333; /* Dark grey color for body text */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+#about {
+    background-color: #ffffff; /* White background */
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#about-content {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem;
+}
+
+#about img.person {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    order: 2; /* Move the person image to the right */
+}
+
+#about-content .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#about-content .column .entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#about-content .column img.logo {
+    width: 100px; /* Fixed size for logos */
+    height: 100px;
+    object-fit: contain;
+}
+
+#about-content .column p {
+    margin-bottom: 0.5rem;
+}
+
+#about-content .column p.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+#about-content .column p.subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+#about-content .column p.location {
+    font-size: 0.9rem; /* Smaller font size */
+    font-style: italic; /* Italic text */
+    color: #666; /* Slightly lighter color */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+#contact {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0056b3; /* Blue color for title */
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact label {
+    font-size: 1rem;
+    color: #333; /* Dark grey text color */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px;
+    background: #fff; /* White background */
+    color: #333; /* Dark grey text color */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+#contact textarea {
+    height: 150px; /* Slightly bigger than other input boxes */
+    resize: none; /* Make it non-resizable */
+}
+
+#contact button {
+    background: #0056b3; /* Blue background */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem; /* Font size for buttons */
+    font-family: 'Lato', sans-serif; /* Updated font to Lato */
+}
+
+#contact button:hover {
+    background: #004494; /* Darker blue background on hover */
+    color: #fff;
+}
