@@ -5,6 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerodynamic Fairing Design</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem; /* Add space between text and images */
+        }
+        .gallery .image-container {
+            position: relative;
+            width: 45%; /* Make images smaller */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .gallery img:hover {
+            filter: brightness(50%);
+        }
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .caption {
+            opacity: 1;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #00d4ff; /* Accent color */
+            color: #1a1a1a; /* Dark text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-left: 0.5rem; /* Align with text */
+        }
+        .button:hover {
+            background-color: #0056b3; /* Darker background on hover */
+            color: #f4f4f4; /* Light text color on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery .image-container {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,11 +82,30 @@
     <main>
         <section class="light-section">
             <h1>Aerodynamic Fairing Design</h1>
-            <p>CAD, CFD, wind tunnel testing and composite material design for a land speed racer aerodynamic fairing. Successfully broke the NZ 50cc partial streamliner class record.</p>
+            <p>Date: <strong>February 2023 – November 2023</strong><br>
+            Client: <strong>Don Short / University of Canterbury</strong></p>
+            <p><br>Investigated the aerodynamic performance of a land-speed racer motorcycle, and created designs to further improve the vehicle.</p>
+            <ul>
+                <li>Created CAD models of the motorcycle frame and existing fairing design with aid from 3D scanning equipment.</li>
+                <li>Performed computational fluid dynamics (CFD) simulations to predict the vehicle performance.</li>
+                <li>Validated the simulations using a scaled wind tunnel model.</li>
+                <li>Designed a modified aerodynamic fairing to improve the overall performance with relatively simple geometrical modifications, and repeated the above analysis process.</li>
+                <li>Designed an entirely new aerodynamic fairing to reach even greater performance gains, taking into account manufacturing processes.</li>
+            </ul>
+            <p><br>The motorcycle with the modified aerodynamic fairing has since broken the NZ land speed record for the 50cc partial streamliner class (50-APS-G).</p>
             <div class="gallery">
-                <img src="image-bikecad.png" alt="Bike CAD Design">
-                <img src="image-bikecfd.png" alt="Bike CFD Analysis">
-                <img src="image-windtunnel.png" alt="Wind Tunnel Testing">
+                <div class="image-container">
+                    <img src="image-bikecad.png" alt="Bike CAD Design">
+                    <div class="caption">Modified Fairing CAD</div>
+                </div>
+                <div class="image-container">
+                    <img src="image-bikecfd.png" alt="Bike CFD Analysis">
+                    <div class="caption">Original Fairing CFD Analysis</div>
+                </div>
+                <div class="image-container">
+                    <img src="image-windtunnel.png" alt="Wind Tunnel Testing">
+                    <div class="caption">Original Fairing Wind Tunnel Testing</div>
+                </div>
             </div>
         </section>
     </main>

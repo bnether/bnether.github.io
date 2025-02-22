@@ -10,11 +10,35 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 1rem; /* Add space between text and images */
+        }
+        .gallery .image-container {
+            position: relative;
+            width: 45%; /* Make images smaller */
+            height: auto; /* Maintain aspect ratio */
         }
         .gallery img {
-            width: calc(50% - 10px);
+            width: 100%;
+            height: auto;
             box-sizing: border-box;
-            aspect-ratio: auto; /* Keep aspect ratio constant */
+            transition: all 0.3s ease;
+        }
+        .gallery img:hover {
+            filter: brightness(50%);
+        }
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .caption {
+            opacity: 1;
         }
         .button {
             display: inline-block;
@@ -24,11 +48,22 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
-            margin-top: 1rem;
+            margin-left: 0.5rem; /* Align with text */
         }
         .button:hover {
             background-color: #0056b3; /* Darker background on hover */
             color: #f4f4f4; /* Light text color on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery .image-container {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -47,12 +82,36 @@
     <main>
         <section class="light-section">
             <h1>Biodegradable PolyNatural® Foliage Clip</h1>
-            <p>FEA and topological optimization methods to design a biodegradable foliage clip in conjunction with EPL group. This product has since been released to market.</p>
+            <p>Date: <strong>September 2023 – November 2023</strong><br>
+            Client: <strong>EPL Group Ltd</strong></p>
+            <p><br>Optimised the geometry and material selection of a biodegradable foliage clip for minimum cost, to meet existing load requirements.</p>
+            <ul>
+                <li>Finite element analysis was performed on an existing polypropylene foliage clip and verified using tensile tests. This was to validate the model before proceeding.</li>
+                <li>The same geometry was then tested using seven biodegradable compounds, indicating the most suitable material to progress with.</li>
+                <li>Various geometric designs using this material were simulated with FEA, and a topology optimization task was run to mathematically generate an optimum design.</li>
+                <li>Properties were finalised such as maximum loads, stress concentrations, factors of safety, material volume and cost savings.</li>
+            </ul>
+            <p><br>The foliage clip has since been released to market, and can be purchased here:
+            <a href="https://polynatural.nz/collections/viticulture-products/products/polynatural-foliage-clip-10-000ea-per-box" class="button">PolyNatural</a></p>
+            <p></p>
             <div class="gallery">
-                <img src="image-loaddeflection.png" alt="Load Deflection Analysis">
-                <img src="image-topology.png" alt="Topology Optimization">
+                <div class="image-container">
+                    <img src="image-foliageclip.png" alt="Von Mises Stress of foliage clip">
+                    <div class="caption">Von Mises Stress Concentrations</div>
+                </div>
+                <div class="image-container">
+                    <img src="image-topology.png" alt="Topological optimisation process">
+                    <div class="caption">Topological Optimisation Process</div>
+                </div>
+                <div class="image-container">
+                    <img src="image-bioclip.png" alt="Foliage clip in use">
+                    <div class="caption">Foliage Clip In Use</div>
+                </div>
+                <div class="image-container">
+                    <img src="image-bioclip2.png" alt="Final product">
+                    <div class="caption">Final Product</div>
+                </div>
             </div>
-            <a href="https://polynatural.nz/collections/viticulture-products/products/polynatural-foliage-clip-10-000ea-per-box" class="button">PolyNatural</a>
         </section>
     </main>
     <footer>

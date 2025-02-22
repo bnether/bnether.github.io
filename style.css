@@ -568,7 +568,7 @@ footer::after {
         align-items: center;
     }
 
-    .gallery img {
+    .gallery .image-container {
         width: 100%;
     }
 }
